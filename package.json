@@ -1,0 +1,25 @@
+{
+  "name": "gus-notify",
+  "version": "1.0.0",
+  "description": "GitHub Actions service to monitor sauna club gus events and send email notifications",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "check-events": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "nodemailer": "^6.9.0",
+    "date-fns": "^2.30.0"
+  },
+  "keywords": [
+    "github-actions",
+    "notifications",
+    "sauna",
+    "events",
+    "email"
+  ],
+  "author": "Anders Stigel",
+  "license": "MIT"
+}
