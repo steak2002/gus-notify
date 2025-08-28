@@ -1,4 +1,4 @@
-const EventChecker = require('./src/eventChecker');
+const EventChecker = require('../../src/eventChecker');
 
 async function testAPI() {
   console.log('🧪 Testing API endpoint...');

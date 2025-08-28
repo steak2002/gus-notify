@@ -2,8 +2,8 @@ name: Check Gus Events
 
 on:
   schedule:
-    # Run every hour at minute 0
-    - cron: "0 * * * *"
+    # Run every 30 minutes from 06:00 to 23:30 during sauna season (October-March)
+    - cron: "0,30 6-23 * 10-12,1-3 *"
   workflow_dispatch: # Allow manual triggering
 
 jobs:
@@ -38,6 +38,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add last_events.json
+          git add data/last_events.json
           git diff --staged --quiet || git commit -m "Update last events [skip ci]"
           git push

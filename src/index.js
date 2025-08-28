@@ -7,7 +7,7 @@ class GusNotifier {
   constructor() {
     this.eventChecker = new EventChecker();
     this.emailNotifier = new EmailNotifier();
-    this.lastEventsFile = path.join(__dirname, '..', 'last_events.json');
+    this.lastEventsFile = path.join(__dirname, '..', 'data', 'last_events.json');
   }
 
   async loadLastEvents() {

@@ -4,6 +4,9 @@ node_modules/
 # Environment variables
 .env
 
+# Local testing files
+data/local_last_events.json
+
 # Logs
 *.log
 npm-debug.log*
