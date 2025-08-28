@@ -9,10 +9,14 @@ on:
 jobs:
   check-events:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allow the action to write to the repository
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,5 +41,3 @@ jobs:
           git add last_events.json
           git diff --staged --quiet || git commit -m "Update last events [skip ci]"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
